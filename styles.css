@@ -1,0 +1,342 @@
+/* =========================
+   RESET Y TIPOGRAFÍA
+   ========================= */
+html, body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 14px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 18px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem; 
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #296dd4;
+}
+
+.logo1 {
+  height: 70px; 
+  width: auto;
+}
+
+.cart {
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #296dd4;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #000; 
+  color: #fff;
+  padding: 14px 22px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px; 
+  transition: all 0.3s ease;
+}
+
+.btn-primary img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-primary:hover {
+  background: #333; 
+  transform: scale(1.05); 
+}
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+.featured-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding: 30px 16px;
+}
+
+.featured-grid .card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-grid .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 6px;
+}
+
+.featured-grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   MOSAICO
+   ========================= */
+.mosaico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 5%;
+}
+
+.mosaico img {
+  width: 45%;
+  max-width: 360px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.mosaico .parrafot {
+  width: 50%;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.mosaico .parrafot h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #296dd4;
+}
+
+.mosaico .parrafot p {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* =========================
+   SPONSORS
+   ========================= */
+.sponsors {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f5f5f5;
+}
+
+.sponsors h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 16px 0;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.footer-col h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer input,
+.footer textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer button {
+  padding: 6px 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.footer button:hover {
+  background: #ddd;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+body {
+  padding-top: 90px;
+}
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .logo1 { height: 64px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.95rem; }
+  .hero-content { font-size: 1.6rem; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .logo1 { height: 58px; }
+  .navbar { padding: 6px 8px; }
+  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .nav-links a { font-size: 0.9rem; }
+  body { padding-top: 100px; }
+  .hero-content { font-size: 1.4rem; top: 57%; }
+  .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
+  .featured-grid { grid-template-columns: repeat(2, 1fr); padding: 24px 14px; gap: 14px; }
+  .mosaico { flex-direction: column; text-align: center; }
+  .mosaico img { width: 100%; margin-bottom: 1.2rem; }
+  .mosaico .parrafot { width: 100%; }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .logo1 { height: 52px; }
+  .navbar { padding: 6px 6px; }
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 0.85rem; }
+  body { padding-top: 110px; }
+  .hero-content { font-size: 1.2rem; top: 56%; }
+  .btn-primary { font-size: 0.9rem; padding: 10px 16px; }
+  .featured-grid { grid-template-columns: 1fr; gap: 14px; padding: 20px 12px; }
+  .footer-content { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .logo1 { height: 46px; }
+  .nav-links { gap: 8px; }
+  .nav-links a { font-size: 0.8rem; }
+  body { padding-top: 120px; }
+  .hero-content { font-size: 1rem; top: 55%; }
+  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
+  .featured-grid .card img { height: 160px; }
+}
+
+
+.titulo-productos {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px 0 20px;
+  font-weight: bold;
+  color: #222;
+}
