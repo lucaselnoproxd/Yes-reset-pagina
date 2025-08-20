@@ -1,5 +1,3 @@
-<!-- Probando -->
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,20 +11,32 @@
 </head>
 <body>
   
-  <!-- NAVBAR -->
-  <nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <!-- Logo a la izquierda -->
+ <div class="nav-logo">
     <a href="index.html">
       <img class="logo1" src="images/Logo.jpeg" alt="Logo de Yes Reset" />
     </a>
+  </div>
+  <!-- Links + hamburguesa + carrito a la derecha -->
+  <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#hero">Inicio</a></li>
       <li><a href="#productos">Productos</a></li>
-      <li><a href="#serviciooooos">Servicios</a></li>
+      <li><a href="#servicios">Servicios</a></li>
       <li><a href="#sponsors">Sponsors</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" aria-label="Abrir menú">
+      &#9776; <!-- icono ☰ -->
+    </button>
+
     <div class="cart" aria-label="Carrito de compras"></div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -48,9 +58,10 @@
   <section class="featured-grid" id="productos">
    
 
-    <div class="card">
+    <div class="card"> 
       <img src="images/Iphone/Iphone 14 pro max dorado.jpg" alt="iPhone 14 Pro Max 128GB dorado">
       <p>iPhone 14 Pro Max 128GB dorado</p>
+      <a class="btn-primary", href = "./celulares/iphone_14_pro_max_dorado_128gb/index.html">detalles</a>
     </div>
     
     <div class="card">
@@ -165,5 +176,18 @@
       <p>© 2025 Yes Reset - Todos los derechos reservados</p>
     </div>
   </footer>
+
+
+
+  <script>
+  // Seleccionamos el botón hamburguesa y el menú de links
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  // Al hacer click en la hamburguesa, alternamos la clase 'show'
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
