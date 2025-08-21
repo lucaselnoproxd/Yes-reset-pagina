@@ -122,34 +122,34 @@ html, body {
 /* =========================
    PRODUCTOS
    ========================= */
-.featured-grid {
+.featured-grid-nuevo {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  padding: 30px 16px;
+  gap: 86px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 12fr));
+  padding: 30px 16px
 }
 
-.featured-grid .card {
-  background: #fff;
-  border: 1px solid #eee;
+.featured-grid-nuevo .card {
+  background: #131313;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  padding: 10px;
-  font-size: 0.95rem;
+  padding: 100px;
+  font-size: 1.95rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #eee;
 }
 
-.featured-grid .card img {
+.featured-grid-nuevo .card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;   /* 🔵 Proporción fija */
+  object-fit: contain;   /* 🔵 Imagen completa sin recorte */
   display: block;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 6px;
 }
 
-.featured-grid .card:hover {
+.featured-grid-nuevo .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
@@ -335,7 +335,7 @@ body {
   body { padding-top: 120px; }
   .hero-content { font-size: 1rem; top: 55%; }
   .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
-  .featured-grid .card img { height: 160px; }
+  .featured-grid .card img { aspect-ratio: 4 / 3; object-fit: contain; }
 }
 
 /* =========================
@@ -394,3 +394,54 @@ body {
 
 
 
+.featured-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding: 30px 16px;
+}
+
+.featured-grid .card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-grid .card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;   
+  object-fit: contain;   
+  display: block;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 6px;
+}
+
+.featured-grid-nuevo .card li {
+  text-align: left;   
+  list-style-position: inside; 
+  margin-left: 10;    
+  
+}
+
+.featured-grid-nuevo .card ul li a {
+  font-size: 25px;
+  color: #fff; 
+  text-decoration: none; 
+  transition: color 0.3s ease;
+  text-align: left;
+
+}
+
+.featured-grid-nuevo .card ul li a:hover {
+  color: #296dd4;
+}
+
+.featured-grid-nuevo .card ul {
+  list-style: none; 
+  padding-left: 0;  
+  margin: 0;        
+}
