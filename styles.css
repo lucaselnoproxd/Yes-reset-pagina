@@ -1,6 +1,9 @@
 /* =========================
    RESET Y TIPOGRAFÍA
    ========================= */
+
+
+   
 html, body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
@@ -463,7 +466,7 @@ body {
 
 
 .featured-grid-nuevo .card {
-  background: linear-gradient(135deg, #7053d8, #9a70e5, #130930, #8c64f0);
+  background: linear-gradient(135deg, #ececec, #9a70e5, #130930, #8c64f0);
   background-size: 400% 400%; /* permite animar el gradiente */
   border: 1px solid #fff;
   color: #fff;
