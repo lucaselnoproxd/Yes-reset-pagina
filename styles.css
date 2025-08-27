@@ -466,7 +466,7 @@ body {
 
 
 .featured-grid-nuevo .card {
-  background: linear-gradient(135deg, #ececec, #9a70e5, #130930, #8c64f0);
+  background: linear-gradient(135deg, #5b02ff, #6613ff, #2f65da, #2f65da);
   background-size: 400% 400%; /* permite animar el gradiente */
   border: 1px solid #fff;
   color: #fff;
@@ -489,4 +489,72 @@ body {
 .featured-grid-nuevo .card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+
+/* CONTENEDOR FLOTANTE */
+.social-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* BOTÓN PRINCIPAL */
+.main-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.main-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+/* LINKS OCULTOS */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo de los iconos */
+.social-links a {
+  margin: 8px 0;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+}
+
+/* EFECTO HOVER: mostrar redes */
+.social-float:hover .social-links {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
