@@ -69,7 +69,7 @@
 
   <div class="hero-product">
     <div class="hero-info">
-      <div class="hero-price" id="price">USD 999</div>
+      <div class="hero-price" id="price">Agotado</div>
       
       <ul class="hero-specs">
         <li>Pantalla Super Retina XDR de 6.1 pulgadas</li>
@@ -227,11 +227,11 @@
       storageButtons.forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const storage = btn.getAttribute('data-storage');
-      let price = 999;
-      if(storage === "256") price = 1099;
-      else if(storage === "512") price = 1299;
-      else if(storage === "1000") price = 1499;
-      priceDisplay.textContent = `USD ${price}`;
+      let price = "Agotado";
+      if(storage === "256") price = "Agotado";
+      else if(storage === "512") price = "Agotado";
+      else if(storage === "1000") price = "Agotado";
+      priceDisplay.textContent = price;
       storageInfo.textContent = `${storage}GB de almacenamiento`;
     });
   });
