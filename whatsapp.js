@@ -8,14 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.addEventListener('click', (e) => {
       e.preventDefault(); // Evita que se abra el link por defecto
 
-      // Intentamos tomar el nombre del producto
       let producto = "";
 
-      // Buscamos un título dentro de la sección hero-product
-      const heroProduct = boton.closest('.hero-product');
-      if (heroProduct) {
-        const titulo = heroProduct.querySelector('.hero-title');
-        if (titulo) producto = titulo.innerText.trim();
+      // 1️⃣ Primero, intentamos tomar el producto del atributo data-producto
+      if (boton.dataset.producto) {
+        producto = boton.dataset.producto.trim();
+      } else {
+        // 2️⃣ Si no hay data-producto, buscamos el título en hero-product
+        const heroProduct = boton.closest('.hero-product');
+        if (heroProduct) {
+          const titulo = heroProduct.querySelector('.hero-title');
+          if (titulo) producto = titulo.innerText.trim();
+        }
+
+        // 3️⃣ Si aún no encontramos nombre, buscamos el título global
+        if (!producto) {
+          const tituloGlobal = document.querySelector('.hero-title');
+          if (tituloGlobal) producto = tituloGlobal.innerText.trim();
+        }
       }
 
       // Si no se encuentra título, usamos un nombre genérico
