@@ -1,11 +1,6 @@
 // whatsapp.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Número de WhatsApp
   const numeroWA = "5491159293444";
-
-  // Tomamos el título del producto (primer h1.hero-title)
-  const titulo = document.querySelector('.hero-title');
-  const nombreProducto = titulo ? titulo.innerText.trim() : "el producto";
 
   // Seleccionamos todos los botones de compra
   const botonesComprar = document.querySelectorAll('.btn-primary');
@@ -14,7 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.addEventListener('click', (e) => {
       e.preventDefault(); // Evita que se abra el link por defecto
 
-      // Creamos el mensaje
+      let nombreProducto = "el producto";
+
+      // Buscamos el contenedor padre que tenga la clase 'hero' o 'hero-product'
+      const contenedorHero = boton.closest('.hero') || boton.closest('.hero-product');
+
+      if (contenedorHero) {
+        // Dentro de ese contenedor, buscamos el título del producto
+        const titulo = contenedorHero.querySelector('.hero-title');
+        if (titulo && titulo.innerText.trim()) {
+          nombreProducto = titulo.innerText.trim();
+        }
+      }
+
+      // Creamos el mensaje personalizado
       const mensaje = `Hola, vengo por ${nombreProducto}. ¿Aún está disponible?`;
 
       // Codificamos el mensaje para URL
