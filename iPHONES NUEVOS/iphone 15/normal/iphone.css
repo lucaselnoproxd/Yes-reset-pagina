@@ -96,7 +96,6 @@ html, body {
   display: block;
 }
 
-/* Contenedor que centra info y imagen */
 .hero-product {
   display: flex;
   justify-content: center;
@@ -111,13 +110,11 @@ html, body {
   flex-wrap: wrap;
 }
 
-/* Información del producto */
 .hero-info {
   max-width: 400px;
   text-align: left;
 }
 
-/* Precio */
 .hero-price {
   font-size: 2rem;
   font-weight: 700;
@@ -125,7 +122,6 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Lista de características */
 .hero-specs {
   list-style: disc;
   padding-left: 20px;
@@ -138,14 +134,12 @@ html, body {
   margin-bottom: 6px;
 }
 
-/* Imagen del producto */
 .hero-content-img {
   width: 300px;
   max-width: 40%;
   object-fit: contain;
 }
 
-/* Botón Comprar */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -269,14 +263,12 @@ html, body {
   font-size: 1rem;
 }
 
-/* Opciones internas */
 .select-modern select option {
   padding: 8px;
   background: #fff;
   color: #222;
 }
 
-/* Botones de colores estilo swatches */
 .color-options {
   display: flex;
   gap: 10px;
@@ -297,7 +289,6 @@ html, body {
   border-color: #296dd4;
 }
 
-/* Botones de almacenamiento estilo moderno */
 .storage-options {
   display: flex;
   gap: 10px;
@@ -319,69 +310,6 @@ html, body {
   color: #fff;
   border-color: #296dd4;
   transform: scale(1.05);
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-body { padding-top: 90px; }
-
-/* Laptops */
-@media (max-width: 1200px) {
-  .logo1 { height: 64px; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 0.95rem; }
-  .hero-content { font-size: 1.6rem; }
-}
-
-/* Tablets */
-@media (max-width: 992px) {
-  .logo1 { height: 58px; }
-  .navbar { padding: 6px 8px; }
-  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
-  .nav-links a { font-size: 0.9rem; }
-  body { padding-top: 100px; }
-  .hero-content { font-size: 1.4rem; top: 57%; }
-  .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
-}
-
-/* Móviles */
-@media (max-width: 768px) {
-  .logo1 { height: 52px; }
-  .navbar { padding: 6px 6px; }
-  .nav-links { gap: 10px; }
-  body { padding-top: 110px; }
-  .hero-content { font-size: 1.2rem; top: 56%; }
-  .btn-primary { font-size: 0.9rem; padding: 10px 16px; }
-
-  .hero-product {
-    position: static;
-    transform: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .hero-info {
-    max-width: 100%;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .hero-content-img {
-    width: 80%;
-    max-width: 320px;
-  }
-  .hero-price { font-size: 1.6rem; }
-  .hero-specs { font-size: 0.9rem; }
-}
-
-/* Teléfonos pequeños */
-@media (max-width: 480px) {
-  .logo1 { height: 46px; }
-  .nav-links { gap: 8px; }
-  body { padding-top: 120px; }
-  .hero-content { font-size: 1rem; top: 55%; }
-  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
 }
 
 /* =========================
@@ -444,38 +372,84 @@ body { padding-top: 90px; }
 }
 
 /* =========================
-   HAMBURGUESA RESPONSIVE
+   RESPONSIVE / HAMBURGUESA
    ========================= */
+body { padding-top: 90px; }
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .logo1 { height: 64px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.95rem; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .logo1 { height: 58px; }
+  .navbar { padding: 6px 8px; }
+  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .nav-links a { font-size: 0.9rem; }
+  body { padding-top: 100px; }
+}
+
+/* Móviles */
 @media (max-width: 768px) {
+  .logo1 { height: 52px; }
+
+  /* Ajuste navbar con hamburguesa a la izquierda */
   .navbar {
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 6px 12px;
   }
 
   .hamburger {
     display: block;
+    margin-right: 12px;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 60px;
+    left: 0; /* ✅ izquierda */
     background: #fff;
     width: 200px;
     border: 1px solid #eee;
     border-radius: 8px;
     padding: 10px 0;
-    align-items: flex-end;
+    gap: 12px;
   }
+
+  .nav-links.show { display: flex; }
 
   .nav-links li {
-    margin: 10px 10px 10px 0;
-    text-align: right;
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 12px;
   }
 
-  .nav-links.show {
-    display: flex;
+  body { padding-top: 110px; }
+
+  .hero-product {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
   }
+  .hero-info { max-width: 100%; margin-bottom: 1rem; text-align: center; }
+  .hero-content-img { width: 80%; max-width: 320px; }
+  .hero-price { font-size: 1.6rem; }
+  .hero-specs { font-size: 0.9rem; }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .logo1 { height: 46px; }
+  .nav-links { gap: 8px; }
+  body { padding-top: 120px; }
+  .hero-content { font-size: 1rem; top: 55%; }
+  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
 }

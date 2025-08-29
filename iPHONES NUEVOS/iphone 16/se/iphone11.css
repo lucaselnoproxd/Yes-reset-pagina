@@ -96,7 +96,6 @@ html, body {
   display: block;
 }
 
-/* Contenedor que centra info y imagen */
 .hero-product {
   display: flex;
   justify-content: center;
@@ -111,13 +110,11 @@ html, body {
   flex-wrap: wrap;
 }
 
-/* Información del producto */
 .hero-info {
   max-width: 400px;
   text-align: left;
 }
 
-/* Precio */
 .hero-price {
   font-size: 2rem;
   font-weight: 700;
@@ -125,7 +122,6 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Lista de características */
 .hero-specs {
   list-style: disc;
   padding-left: 20px;
@@ -138,14 +134,12 @@ html, body {
   margin-bottom: 6px;
 }
 
-/* Imagen del producto */
 .hero-content-img {
   width: 300px;
   max-width: 40%;
   object-fit: contain;
 }
 
-/* Botón Comprar */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -187,175 +181,6 @@ html, body {
   backdrop-filter: none;
 }
 
-.details-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.hero-details h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #296dd4;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.details-list {
-  list-style: disc;
-  padding-left: 20px;
-  font-size: 1rem;
-}
-
-.details-list li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-body {
-  padding-top: 90px;
-}
-
-/* Laptops */
-@media (max-width: 1200px) {
-  .logo1 { height: 64px; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 0.95rem; }
-  .hero-content { font-size: 1.6rem; }
-}
-
-/* Tablets */
-@media (max-width: 992px) {
-  .logo1 { height: 58px; }
-  .navbar { padding: 6px 8px; }
-  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
-  .nav-links a { font-size: 0.9rem; }
-  body { padding-top: 100px; }
-  .hero-content { font-size: 1.4rem; top: 57%; }
-  .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
-  .featured-grid { grid-template-columns: repeat(2, 1fr); padding: 24px 14px; gap: 14px; }
-  .mosaico { flex-direction: column; text-align: center; }
-  .mosaico img { width: 100%; margin-bottom: 1.2rem; }
-  .mosaico .parrafot { width: 100%; }
-}
-
-/* Móviles */
-@media (max-width: 768px) {
-  .logo1 { height: 52px; }
-  .navbar { padding: 6px 6px; }
-  .nav-links { gap: 10px; }
-  .nav-links a { font-size: 0.85rem; }
-  body { padding-top: 110px; }
-  .hero-content { font-size: 1.2rem; top: 56%; }
-  .btn-primary { font-size: 0.9rem; padding: 10px 16px; }
-  .featured-grid { grid-template-columns: 1fr; gap: 14px; padding: 20px 12px; }
-  .footer-content { grid-template-columns: 1fr; gap: 14px; }
-
-  .hero-product {
-    position: static; /* 🔹 ya no flotando sobre la imagen */
-    transform: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .hero-info {
-    max-width: 100%;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .hero-content-img {
-    width: 80%;
-    max-width: 320px;
-  }
-  .hero-price {
-    font-size: 1.6rem;
-  }
-  .hero-specs {
-    font-size: 0.9rem;
-  }
-}
-
-/* Teléfonos pequeños */
-@media (max-width: 480px) {
-  .logo1 { height: 46px; }
-  .nav-links { gap: 8px; }
-  body { padding-top: 120px; }
-  .hero-content { font-size: 1rem; top: 55%; }
-  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
-  .featured-grid .card img { height: 160px; }
-}
-
-/* =========================
-   OTROS ESTILOS
-   ========================= */
-.titulo-productos {
-  font-size: 2rem;
-  text-align: center;
-  margin: 40px 0 20px;
-  font-weight: bold;
-  color: #222;
-}
-
-/* Links ocultos en móviles */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: flex-end;
-    padding: 6px 12px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    width: 200px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 10px 0;
-    align-items: flex-end;
-  }
-
-  .nav-links li {
-    margin: 10px 10px 10px 0;
-    text-align: right;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
-
-/* =========================
-   HERO DETALLES SOBRE FONDO (simplificado)
-   ========================= */
-.hero-details {
-  padding: 60px 20px;
-  color: #000000;
-  text-align: left;
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 40px auto;
-  background: transparent;
-  border-radius: 0;
-  backdrop-filter: none;
-}
-
-.details-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 .hero-details h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -383,39 +208,9 @@ body {
   left: -15px;
 }
 
-/* Responsivo */
-@media (max-width: 992px) {
-  .hero-details {
-    padding: 40px 15px;
-    margin: 20px auto;
-  }
-  .hero-details h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-details {
-    padding: 30px 10px;
-    margin: 15px auto;
-  }
-  .hero-details h3 {
-    font-size: 1.2rem;
-  }
-  .hero-details ul li {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-details h3 {
-    font-size: 1.1rem;
-  }
-  .hero-details ul li {
-    font-size: 0.9rem;
-  }
-}
-
+/* =========================
+   HERO TITLE
+   ========================= */
 .hero-title {
   position: absolute;
   top: 2%;
@@ -429,25 +224,97 @@ body {
   z-index: 2;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-    top: 8%;
-  }
+/* =========================
+   SELECTORES MODERNOS (Colores y Almacenamiento)
+   ========================= */
+.select-modern {
+  display: inline-block;
+  position: relative;
+  margin: 12px 0;
 }
 
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.6rem;
-    top: 6%;
-  }
+.select-modern select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 40px 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.select-modern select:focus {
+  outline: none;
+  border-color: #296dd4;
+  box-shadow: 0 0 8px rgba(41,109,212,0.4);
+}
 
+.select-modern::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #296dd4;
+  font-size: 1rem;
+}
 
+.select-modern select option {
+  padding: 8px;
+  background: #fff;
+  color: #222;
+}
 
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
 
+.color-options button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-options button:hover {
+  transform: scale(1.2);
+  border-color: #296dd4;
+}
+
+.storage-options {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.storage-options button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.storage-options button:hover {
+  background: #296dd4;
+  color: #fff;
+  border-color: #296dd4;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 .footer {
   background: #000;
   color: #fff;
@@ -502,4 +369,87 @@ body {
 
 .footer button:hover {
   background: #ddd;
+}
+
+/* =========================
+   RESPONSIVE / HAMBURGUESA
+   ========================= */
+body { padding-top: 90px; }
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .logo1 { height: 64px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.95rem; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .logo1 { height: 58px; }
+  .navbar { padding: 6px 8px; }
+  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .nav-links a { font-size: 0.9rem; }
+  body { padding-top: 100px; }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .logo1 { height: 52px; }
+
+  /* Ajuste navbar con hamburguesa a la izquierda */
+  .navbar {
+    justify-content: flex-start;
+    padding: 6px 12px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 12px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0; /* ✅ izquierda */
+    background: #fff;
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .nav-links.show { display: flex; }
+
+  .nav-links li {
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  body { padding-top: 110px; }
+
+  .hero-product {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .hero-info { max-width: 100%; margin-bottom: 1rem; text-align: center; }
+  .hero-content-img { width: 80%; max-width: 320px; }
+  .hero-price { font-size: 1.6rem; }
+  .hero-specs { font-size: 0.9rem; }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .logo1 { height: 46px; }
+  .nav-links { gap: 8px; }
+  body { padding-top: 120px; }
+  .hero-content { font-size: 1rem; top: 55%; }
+  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
 }

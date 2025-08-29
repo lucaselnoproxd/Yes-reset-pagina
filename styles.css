@@ -1,9 +1,6 @@
 /* =========================
    RESET Y TIPOGRAFÍA
    ========================= */
-
-
-   
 html, body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
@@ -37,14 +34,14 @@ html, body {
   z-index: 1000;
 }
 
-.nav-right {
+.nav-left {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 .nav-links {
-  display:flex;
+  display: flex;
   list-style: none;
   gap: 18px; 
 }
@@ -68,6 +65,13 @@ html, body {
 
 .cart {
   cursor: pointer;
+}
+
+/* =========================
+   HAMBURGUESA
+   ========================= */
+.hamburger {
+  display: none; /* solo se activa en móviles */
 }
 
 /* =========================
@@ -168,6 +172,10 @@ html, body {
   border: 1px solid #eee;
   padding: 10px;
   font-size: 0.95rem;
+}
+
+.featured-grid .card img[src$=".jpg"] {
+  border-radius: 500px;
 }
 
 .featured-grid-nuevo .card {
@@ -346,7 +354,7 @@ html, body {
 }
 
 /* =========================
-   HERO BOTTOM (ANTES DEL FOOTER)
+   HERO BOTTOM
    ========================= */
 .hero-bottom {
   position: relative;
@@ -426,12 +434,44 @@ body {
 /* Móviles */
 @media (max-width: 768px) {
   .logo1 { height: 52px; }
-  .navbar { padding: 6px 6px; justify-content: flex-end; }
-  .hamburger { display: block; font-size: 2rem; background: none; border: none; cursor: pointer; }
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; right: 0; background: #fff; width: 200px; border: 1px solid #eee; border-radius: 8px; padding: 10px 0; align-items: flex-end; }
-  .nav-links li { margin: 10px 10px 10px 0; text-align: right; }
-  .nav-links.show { display: flex; }
-  .nav-links a { font-size: 0.85rem; }
+  .navbar {
+    justify-content: flex-start;
+    padding: 6px 12px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 12px;
+  }
+
   body { padding-top: 110px; }
   .hero-content { font-size: 1.2rem; top: 56%; }
   .btn-primary { font-size: 0.9rem; padding: 10px 16px; }
@@ -464,10 +504,9 @@ body {
   color: #222;
 }
 
-
 .featured-grid-nuevo .card {
   background: linear-gradient(135deg, #5b02ff, #6613ff, #804cb1, #2f65da);
-  background-size: 400% 400%; /* permite animar el gradiente */
+  background-size: 400% 400%;
   border: 1px solid #fff;
   color: #fff;
   padding: 20px;
@@ -475,38 +514,36 @@ body {
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: metallic 6s ease infinite; /* animación del gradiente */
+  animation: metallic 6s ease infinite;
 }
 
-/* Animación del efecto metálico */
 @keyframes metallic {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Hover para levantar la tarjeta y hacerla más vistosa */
 .featured-grid-nuevo .card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
-
-/* CONTENEDOR FLOTANTE */
+/* =========================
+   BOTÓN FLOTANTE REDES
+   ========================= */
 .social-float {
   position: fixed;
   bottom: 20px;
   right: 0px;
   z-index: 1000;
   display: flex;
-  flex-direction: column; /* 👈 ahora el botón queda debajo */
+  flex-direction: column;
   align-items: center;
 }
 
-/* BOTÓN PRINCIPAL */
 .main-btn {
   background: #25d36500;
-  width: 60;
+  width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
@@ -514,15 +551,14 @@ body {
   justify-content: center;
   cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0);
-  z-index: 2; /* por encima del fondo pero debajo de los íconos */
+  z-index: 2;
 }
 
 .main-btn img {
   width: 100px;
-  height: 200px;
+  height: 160px;
 }
 
-/* ICONOS DE REDES (arriba del botón principal, ocultos al inicio) */
 .social-links {
   display: flex;
   flex-direction: column;
@@ -552,11 +588,10 @@ body {
 }
 
 .social-links img {
-  width: 50;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
-/* EFECTO HOVER: mostrar redes */
 .social-float:hover .social-links {
   opacity: 1;
   transform: translateY(0);
