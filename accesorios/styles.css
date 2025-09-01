@@ -1,0 +1,290 @@
+/* =========================
+   RESET Y TIPOGRAFÍA
+   ========================= */
+html, body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links {
+  display:flex;
+  list-style: none;
+  gap: 18px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem; 
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #296dd4;
+}
+
+.logo1 {
+  height: 70px; 
+  width: auto;
+}
+
+.cart {
+  cursor: pointer;
+}
+
+/* =========================
+   HAMBURGUESA
+   ========================= */
+.hamburger {
+  display: none; /* solo se activa en móviles */
+}
+
+/* =========================
+   CUERPO / ACCESORIOS
+   ========================= */
+body {
+  padding-top: 90px;
+  background: #f9f9f9;
+}
+
+.accessories-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accessories-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #296dd4;
+  margin-bottom: 15px;
+}
+
+.accessories-section p {
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.accessories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.accessory-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.accessory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.accessory-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.accessory-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.accessory-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.accessory-price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #296dd4;
+  margin-bottom: 10px;
+}
+
+.btn-accessory {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-accessory:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 16px 0;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.footer-col h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer input,
+.footer textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer button {
+  padding: 6px 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.footer button:hover {
+  background: #ddd;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1200px) {
+  .logo1 { height: 64px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.95rem; }
+}
+
+@media (max-width: 992px) {
+  .logo1 { height: 58px; }
+  .navbar { padding: 6px 8px; }
+  .nav-links { gap: 12px; }
+}
+
+@media (max-width: 768px) {
+  .logo1 { height: 52px; }
+  .navbar {
+    justify-content: flex-start;
+    padding: 6px 12px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  .nav-links a { font-size: 0.85rem; }
+  .accessories-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer-content { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (max-width: 480px) {
+  .logo1 { height: 46px; }
+  .nav-links a { font-size: 0.8rem; }
+}

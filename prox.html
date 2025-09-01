@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Próximamente - Yes Reset</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/iconoc.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img class="logo1" src="images/Logo.jpeg" alt="Logo de Yes Reset" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Inicio</a></li>
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="/accesorios/index.html">Accesorios</a></li>
+      
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Abrir menú">&#9776;</button>
+    <div class="cart"></div>
+  </div>
+</nav>
+
+<!-- SECCIÓN PRÓXIMAMENTE -->
+<section class="hero" style="text-align: center; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #f5f5f5;">
+  <h1 style="font-size: 2.5rem; color: #296dd4; margin-bottom: 20px;">Próximamente</h1>
+  <p style="font-size: 1.2rem; color: #333; max-width: 500px;">Estamos trabajando en esta sección para traerte los mejores dispositivos Apple. ¡Vuelve pronto para descubrir nuestras novedades!</p>
+  <a href="index.html" class="btn-primary" style="margin-top: 20px;">Volver al inicio</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacto">
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>Yes Reset</h4>
+      <p>
+        Oficina comercial:<br>
+        Avenida Rivadavia 3600 Capital federal<br>
+        <br>
+        Sucursal Almagro:<br>
+        Avenida Diaz Velez 4010 Capital federal<br>
+        
+        <br>
+        linea de contacto: +54 911 592 9344 <br>
+        yesreset.apple@gmail.com
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links útiles</h4>
+      <ul>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto directo</h4>
+      <form action="mailto:yesreset.apple@gmail.com" method="post" enctype="text/plain"></form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" name="asunto" placeholder="Asunto" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Yes Reset - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

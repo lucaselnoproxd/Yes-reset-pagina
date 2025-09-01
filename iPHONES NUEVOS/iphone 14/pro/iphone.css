@@ -1,0 +1,455 @@
+/* =========================
+   RESET Y TIPOGRAFÍA
+   ========================= */
+html, body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo1 {
+  height: 70px;
+  width: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links {
+  display:flex;
+  list-style: none;
+  gap: 18px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem; 
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #296dd4;
+}
+
+.cart {
+  cursor: pointer;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #4b5d79;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  gap: 2rem;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.hero-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.hero-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #296dd4;
+  margin-bottom: 1rem;
+}
+
+.hero-specs {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.hero-specs li {
+  margin-bottom: 6px;
+}
+
+.hero-content-img {
+  width: 300px;
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #000; 
+  color: #fff;
+  padding: 14px 22px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px; 
+  transition: all 0.3s ease;
+}
+
+.btn-primary img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-primary:hover {
+  background: #333; 
+  transform: scale(1.05); 
+}
+
+/* =========================
+   SECCIÓN DE CARACTERÍSTICAS COMPLETAS
+   ========================= */
+.hero-details {
+  padding: 60px 20px;
+  color: #000000;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: transparent;
+  border-radius: 0;
+  backdrop-filter: none;
+}
+
+.hero-details h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #296dd4;
+}
+
+.hero-details ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.hero-details ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+  position: relative;
+  color: #000000;
+}
+
+.hero-details ul li::before {
+  content: "•";
+  color: #296dd4;
+  position: absolute;
+  left: -15px;
+}
+
+/* =========================
+   HERO TITLE
+   ========================= */
+.hero-title {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #296dd4;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  text-align: center;
+  z-index: 2;
+}
+
+/* =========================
+   SELECTORES MODERNOS (Colores y Almacenamiento)
+   ========================= */
+.select-modern {
+  display: inline-block;
+  position: relative;
+  margin: 12px 0;
+}
+
+.select-modern select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 40px 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-modern select:focus {
+  outline: none;
+  border-color: #296dd4;
+  box-shadow: 0 0 8px rgba(41,109,212,0.4);
+}
+
+.select-modern::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #296dd4;
+  font-size: 1rem;
+}
+
+.select-modern select option {
+  padding: 8px;
+  background: #fff;
+  color: #222;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.color-options button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-options button:hover {
+  transform: scale(1.2);
+  border-color: #296dd4;
+}
+
+.storage-options {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.storage-options button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.storage-options button:hover {
+  background: #296dd4;
+  color: #fff;
+  border-color: #296dd4;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 16px 0;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.footer-col h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer input,
+.footer textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer button {
+  padding: 6px 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.footer button:hover {
+  background: #ddd;
+}
+
+/* =========================
+   RESPONSIVE / HAMBURGUESA
+   ========================= */
+body { padding-top: 90px; }
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .logo1 { height: 64px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.95rem; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .logo1 { height: 58px; }
+  .navbar { padding: 6px 8px; }
+  .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .nav-links a { font-size: 0.9rem; }
+  body { padding-top: 100px; }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .logo1 { height: 52px; }
+
+  /* Ajuste navbar con hamburguesa a la izquierda */
+  .navbar {
+    justify-content: flex-start;
+    padding: 6px 12px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 12px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0; /* ✅ izquierda */
+    background: #fff;
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .nav-links.show { display: flex; }
+
+  .nav-links li {
+    margin: 8px 0;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  body { padding-top: 110px; }
+
+  .hero-product {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .hero-info { max-width: 100%; margin-bottom: 1rem; text-align: center; }
+  .hero-content-img { width: 80%; max-width: 320px; }
+  .hero-price { font-size: 1.6rem; }
+  .hero-specs { font-size: 0.9rem; }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .logo1 { height: 46px; }
+  .nav-links { gap: 8px; }
+  body { padding-top: 120px; }
+  .hero-content { font-size: 1rem; top: 55%; }
+  .btn-primary { font-size: 0.85rem; padding: 8px 14px; }
+}

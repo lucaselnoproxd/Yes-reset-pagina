@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yes Reset - Reparación de dispositivos Apple</title>
+  <meta name="description" content="Yes Reset ofrece reparación profesional de iPhones, MacBooks, iPads y más. Trabajamos con repuestos originales para que tu dispositivo quede como nuevo.">
+  <link rel="stylesheet" href="iphone11n.css" />
+  <link rel="icon" type="image/png" href="../../images/iconoc.png">
+</head>
+<body>
+  
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <a href="../../index.html">
+      <img class="logo1" src="../../images/Logo.jpeg" alt="Logo de Yes Reset" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="../../index.html#hero">Inicio</a></li>
+      <li><a href="../../index.html#productos">Productos</a></li>
+      <li><a href="../../index.html#servicios">Servicios</a></li>
+      <li><a href="../../accesorios/index.html">Accesorios</a></li>
+      <li><a href="../../index.html#contacto">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger" aria-label="Abrir menú">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <img src="../../images/pagina2.jpg" alt="Imagen principal mostrando productos Apple reparados" class="hero-img" />
+  <h1 class="hero-title">iPhone 13 Pro, bateria 80%</h1>
+  <div class="hero-product">
+    <div class="hero-info">
+      <div class="hero-price">USD 550</div>
+      <ul class="hero-specs">
+        <li>Pantalla Super Retina XDR OLED de 6.1 pulgadas</li>
+        <li>128GB de almacenamiento</li>
+        <li>Sistema triple cámara de 12MP</li>
+        <li>Chip A15 Bionic</li>
+        <li>iOS 15 preinstalado</li>
+      </ul>
+      <a href="https://wa.me/5491159293444" class="btn-primary">Comprar</a>
+    </div>
+    <!-- Imagen del celular con data-images -->
+    <img id="hero-img-celular" class="hero-content-img" 
+         src="../../images/Iphone/i13p1.jpg" 
+         alt="iPhone 13 Pro 128GB dorado"
+         data-images="../../images/Iphone/i13p2.jpg,../../images/Iphone/i13p3.jpg,../../images/Iphone/i13p4.jpg,../../images/Iphone/i13p5.jpg,../../images/Iphone/i13p6.jpg,../../images/Iphone/i13p7.jpg">
+
+         
+  </div>
+</section>
+
+<!-- DETALLES -->
+<section class="hero-details" id="caracteristicas-completas">
+  <ul>
+    <li>
+      <h3>Acabado</h3>
+      <ul>
+        <li>Dorado</li>
+        <li>Parte delantera con Ceramic Shield, parte trasera de vidrio mate texturizado y estructura de acero inoxidable</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Capacidad</h3>
+      <ul>
+        <li>128 GB (también disponible en 256 GB y 512 GB)</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Dimensiones y peso</h3>
+      <ul>
+        <li>Altura: 146,7 mm</li>
+        <li>Ancho: 71,5 mm</li>
+        <li>Grosor: 7,65 mm</li>
+        <li>Peso: 204 g</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Pantalla</h3>
+      <ul>
+        <li>Super Retina XDR OLED de 6,1″ (diagonal)</li>
+        <li>Resolución 2 532 × 1 170 px (~460 ppi)</li>
+        <li>HDR, True Tone, amplia gama (P3), ProMotion, Haptic Touch</li>
+        <li>Contraste típico 2 000 000:1</li>
+        <li>Brillo típico: 800 nits; HDR: hasta 1 200 nits</li>
+      </ul>
+    </li>
+    <!-- Resto de detalles omitidos por brevedad, mantener igual -->
+  </ul>
+</section>
+
+<!-- SCRIPTS -->
+<script>
+  // Menú hamburguesa
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacto">
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>Yes Reset</h4>
+      <p>
+        Oficina comercial:<br>
+        Avenida Rivadavia 3600 Capital federal<br><br>
+        Sucursal Almagro:<br>
+        Avenida Diaz Velez 4010 Capital federal<br><br>
+        Línea de contacto: +54 911 592 9344<br>
+        yesreset.apple@gmail.com
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links útiles</h4>
+      <ul>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto directo</h4>
+      <form action="mailto:yesreset.apple@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" name="asunto" placeholder="Asunto" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Yes Reset - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!-- JS Externo -->
+<script src="./../../rotador.js"></script>
+<script src="./../../whatsapp.js"></script>
+
+</body>
+</html>

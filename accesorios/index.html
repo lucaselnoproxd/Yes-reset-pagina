@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yes Reset - Accesorios Apple</title>
+  <meta name="description" content="Yes Reset ofrece accesorios originales para iPhones, desde fundas hasta auriculares. Complementa tu dispositivo con calidad y estilo.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/images/iconoc.png">
+  <style>
+    /* =========================
+       GALERÍA DE ACCESORIOS
+       ========================= */
+    .accessories-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .accessories-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #296dd4;
+      margin-bottom: 15px;
+    }
+
+    .accessories-section p {
+      text-align: center;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .accessories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .accessory-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .accessory-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .accessory-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .accessory-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #222;
+    }
+
+    .accessory-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .accessory-price {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #296dd4;
+      margin-bottom: 10px;
+    }
+
+    .btn-accessory {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #000;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-accessory:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="/index.html">
+        <img class="logo1" src="/images/Logo.jpeg" alt="Logo de Yes Reset" />
+      </a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/index.html#hero">Inicio</a></li>
+        <li><a href="/index.html#productos">Productos</a></li>
+        <li><a href="/index.html#servicios">Servicios</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+        <li><a href="/index.html#contacto">Contacto</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Abrir menú">&#9776;</button>
+      <div class="cart" aria-label="Carrito de compras" role="button"></div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN ACCESORIOS -->
+  <section class="accessories-section" id="accesorios">
+    <h1>Accesorios para iPhone</h1>
+    <p>Encuentra todo lo que necesitas para complementar tu iPhone: fundas, cargadores, auriculares y más.</p>
+
+    <div class="accessories-grid">
+      <!-- Producto 1 -->
+      <div class="accessory-card">
+        <img src="images/funda.jpeg" alt="Funda Transparente">
+        <h3>Funda Transparente</h3>
+        <p>Protección ligera y elegante, mantiene el diseño original del iPhone.</p>
+        <div class="accessory-price">USD 15</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar la Funda Transparent, que modelos tienen disponibles?">Comprar</a>
+      </div>
+      
+      <div class="accessory-card">
+        <img src="images/cascos.jpg" alt="Funda Transparente">
+        <h3>Airpods Max</h3>
+        <p>Escucha tu musica a un nivel de calidad nunca antes experimentado..</p>
+        <div class="accessory-price">USD 150</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar los airpodsmax, que modelos tienen disponibles?">Comprar</a>
+      </div>
+      <!-- Producto 2 -->
+      <div class="accessory-card">
+        <img src="images/cuero.jpg" alt="Funda de Cuero">
+        <h3>Funda de Cuero</h3>
+        <p>Diseño premium, tacto suave, protección total contra golpes y caídas.</p>
+        <div class="accessory-price">USD 35</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar la Funda de Cuero, ¿que modelos tienen disponibles?">Comprar</a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="accessory-card">
+        <img src="images/cargador.jpg" alt="Cargador Rápido 20W">
+        <h3>Cargador Rápido 20W</h3>
+        <p>Carga rápida para tu iPhone, compatible con todos los modelos recientes.</p>
+        <div class="accessory-price">USD 25</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar el Cargador Rápido 20W">Comprar</a>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="accessory-card">
+        <img src="images/airpods.jpg" alt="Apple AirPods">
+        <h3>AirPods</h3>
+        <p>Sonido envolvente y conexión automática con tu iPhone. Ideal para música y llamadas.</p>
+        <div class="accessory-price">USD 199</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar los AirPods, ¿que modelos tienen disponibles?">Comprar</a>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="accessory-card">
+        <img src="images/auto.jpg" alt="Soporte para Auto">
+        <h3>Soporte para Auto</h3>
+        <p>Mantén tu iPhone seguro mientras conduces, giratorio 360°.</p>
+        <div class="accessory-price">USD 20</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar el Soporte para Auto, ¿que modelos tienen disponibles?">Comprar</a>
+      </div>
+
+      
+
+      <!-- Producto 6 -->
+      <div class="accessory-card">
+        <img src="images/cable.jpg" alt="Cable Lightning">
+        <h3>Cable Lightning</h3>
+        <p>Carga y sincroniza tu iPhone con alta velocidad, resistente a dobleces.</p>
+        <div class="accessory-price">USD 10</div>
+        <a href="#" class="btn-accessory" data-msg="Hola, quiero comprar el Cable Lightning">Comprar</a>
+      </div>
+    </div>
+
+    
+
+  </section>
+
+  <!-- FOOTER -->
+ <footer class="footer" id="contacto">
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>Yes Reset</h4>
+      <p>
+        Oficina comercial:<br>
+        Avenida Rivadavia 3600 Capital federal<br>
+        <br>
+        Sucursal Almagro:<br>
+        Avenida Diaz Velez 4010 Capital federal<br>
+        
+        <br>
+        linea de contacto: +54 911 592 9344 <br>
+        yesreset.apple@gmail.com
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links útiles</h4>
+      <ul>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto directo</h4>
+      <form action="mailto:yesreset.apple@gmail.com" method="post" enctype="text/plain"></form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" name="asunto" placeholder="Asunto" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Yes Reset - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+  <script>
+    // Navbar hamburguesa
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // WhatsApp botones de accesorios
+    const waNumber = "5491159293444"; // tu número de WhatsApp
+    const accessoryButtons = document.querySelectorAll('.btn-accessory');
+
+    accessoryButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const message = encodeURIComponent(button.dataset.msg);
+        const url = `https://wa.me/${waNumber}?text=${message}`;
+        window.open(url, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>

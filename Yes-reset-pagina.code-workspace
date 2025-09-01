@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Yes-reset-pagina",
+			"path": "."
+		},
+		{
+			"name": "iPHONES NUEVOS",
+			"path": "../../iPHONES NUEVOS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Yes-reset-pagina"
+	}
+}
